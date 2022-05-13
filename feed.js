@@ -1,5 +1,4 @@
-      <div id="load_data" class="posts_box_holder">
-        <script>
+
           $(document).ready(function(){
             var limit = 5;
               var start = 0;
@@ -36,5 +35,4 @@
                         }
                         });
                       });
-        </script>
-      </div>
+ 
