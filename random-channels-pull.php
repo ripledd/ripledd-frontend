@@ -1,13 +1,13 @@
           <?php
-          $query = "SELECT * FROM users WHERE followers > 2 ORDER BY RAND() LIMIT 4";
+          $query = "SELECT * FROM --- WHERE --- > 2 ORDER BY RAND() LIMIT 4";
            $result = mysqli_query($dbconn, $query);
              while($c_row = mysqli_fetch_array($result)){
                // Users data list from db
-               $uname = $c_row["uname"];
-               $avatar = $c_row["avatar"];
-               $quote_text = $c_row["quote_text"];
-               $follower = $c_row["followers"];
-               $user_url = $c_row["user_url"];
+               $uname = $c_row["---"];
+               $avatar = $c_row["---"];
+               $quote_text = $c_row["---"];
+               $follower = $c_row["---"];
+               $user_url = $c_row["---"];
 
                if ($quote_text == "") {
                  $quote_text = "@$user_url";
