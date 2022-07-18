@@ -10,5 +10,5 @@ https://speecher.me/center/policy-terms
 
 
 
-Pixelrow foundation ©2022
+Pixelrow Ltd. ©2022
 
