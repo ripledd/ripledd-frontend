@@ -1,5 +1,5 @@
 # frontend-speecher
-# Speechr is open source application. Rights to use code are granted by Pixelrow foundation;
+# Speecher is open source application. Rights to use code are granted by Pixelrow Ltd.;
 
 # Limitations---------------------------------------------------------------------------------
 All shared sources are fully allowed to use in other projects or for any other purposes. Using Speecher / Pixelrow foundation as own brand is strictly prohibited.
