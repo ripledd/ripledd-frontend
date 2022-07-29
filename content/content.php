@@ -1,4 +1,3 @@
-﻿<?php include("../dbconn.php") ?>
 <?php
 session_start();
   $logged_user_secure_id = $_SESSION["secure_id"];
