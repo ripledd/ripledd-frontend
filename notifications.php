@@ -1,4 +1,3 @@
-<?php include("dbconn.php") ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
