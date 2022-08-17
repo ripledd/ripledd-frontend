@@ -55,8 +55,8 @@ $content_url = $_GET['c'];
            // Detect urls
               $take_url = strip_tags($content_raw);
                 $content_with_links = preg_replace('@(https?://([-\w\.]+[-\w])+(:\d+)?(/([\w/_\.#-]*(\?\S+)?[^\.\s])?)?)@', '<a href="$1" target="_blank" rel="nofollow">$1</a>', $take_url);
-                  $content_with_hashtags = preg_replace('/#(\w+)/', '<a href="https://speecher.me/search?term=$1" target="_blank" rel="nofollow">#$1</a>', $content_with_links);
-                    $content = preg_replace('/@(\w+)/', '<a style="background:#d7dffc;" href="https://speecher.me/user/$1" target="_blank" rel="nofollow">@$1</a>', $content_with_hashtags);
+                  $content_with_hashtags = preg_replace('/#(\w+)/', '<a href="https://ripledd.com/search?term=$1" target="_blank" rel="nofollow">#$1</a>', $content_with_links);
+                    $content = preg_replace('/@(\w+)/', '<a style="background:#d7dffc;" href="https://ripledd.com/user/$1" target="_blank" rel="nofollow">@$1</a>', $content_with_hashtags);
 
                    $c_type_raw = $post_data["c_type"];
                      if ($c_type_raw != ""){$c_type = "<span class='c_type'> $c_type_raw </span> ";}
@@ -177,7 +177,7 @@ $content_url = $_GET['c'];
   <head>
     <meta charset="utf-8">
     <title><?=$content_title?></title>
-    <meta name="description" content="By:<?=$posted_by?>, <?=$content_title?>, Created:<?=$post_date_two?>, Likes:<?=$likes?>, Views:<?=$views?>, Comments:<?=$comments?>, View this content in Speecher!">
+    <meta name="description" content="By:<?=$posted_by?>, <?=$content_title?>, Created:<?=$post_date_two?>, Likes:<?=$likes?>, Views:<?=$views?>, Comments:<?=$comments?>, View this content in Ripledd!">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/post.css">
     <link rel="stylesheet" href="../css/videoplayer.css">
@@ -196,14 +196,14 @@ $content_url = $_GET['c'];
       <div class="header_content_holder">
         <div class="m_elements_h">
           <!-- Elements for mobile START ---------------------------------------------------------------------->
-          <img class="logo_main_m" onclick="window.location.href='../'" src="../img/m_logo.png" alt="speecher_logo">
+          <picture><source srcset="../img/m_logo_col.png" media="(prefers-color-scheme: dark)"><img class="logo_main_m" onclick="window.location.href='../'" src="../img/m_logo.png" alt="ripledd_logo"></picture>
           <?php if ($logged_user_secure_id == ""):echo "<style>.my_profile_bar_m{display:none;}  </style>";?>
 	        <?php elseif ($logged_user_secure_id != ""):echo "<style>.my_profile_bar_m{display:block;}  </style>";?>
           <?php endif; ?>
           <img onclick="openAccountMenu()" class="my_profile_bar_m" src="../profile/<?=$avatar?>" alt="">
         </div>
         <!-- Elements for mobile END ---------------------------------------------------------------------->
-        <picture><source srcset="../img/speecher_logo_light.png" media="(prefers-color-scheme: dark)"><img class="logo_main" onclick="window.location.href='../'" src="../img/speecher_logo.png" alt="speecher_logo"></picture>
+        <picture><source srcset="../img/ripledd_logo_light.png" media="(prefers-color-scheme: dark)"><img class="logo_main" onclick="window.location.href='../'" src="../img/ripledd_logo.png" alt="ripledd_logo"></picture>
           <form class="search_box" action="../search.php" method="post">
             <input id="live_search" class="search_input" type="text" autocomplete="off" placeholder="Find content..."  name="input_value" value="">
 
@@ -265,7 +265,7 @@ $content_url = $_GET['c'];
             <svg class="svg_add_post_menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="arcs"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>
           </button>
           <br>
-          <button onclick="window.location.href='../account/manage?add_status'" class="add_post_menu_btn" type="button" ><span class="add_post_menu_btn_txt">Add new status</span>
+          <button onclick="window.location.href='../account/manage?add_status'" class="add_post_menu_btn" type="button" ><span class="add_post_menu_btn_txt">Update status</span>
             <svg class="svg_add_post_menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="arcs"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg>
           </button>
         </div>
@@ -354,7 +354,7 @@ $content_url = $_GET['c'];
                       <svg class='svg_content_menu' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='5' r='3'></circle><circle cx='6' cy='12' r='3'></circle><circle cx='18' cy='19' r='3'></circle><line x1='8.59' y1='13.51' x2='15.42' y2='17.49'></line><line x1='15.41' y1='6.51' x2='8.59' y2='10.49'></line></svg>
                     </button>
                     <br>
-                    <a onclick="window.open(this.href,'_blank');return false;" href='../report?https://speecher.me/content/<?=$post_id?>'>
+                    <a onclick="window.open(this.href,'_blank');return false;" href='../report?https://ripledd.com/content/<?=$post_id?>'>
                     <button class='content_menu_btn' type='button' ><span class='post_menu_btn_txt'>Report</span>
                       <svg class='svg_content_menu' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'><polygon points='7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2'></polygon><line x1='12' y1='8' x2='12' y2='12'></line><line x1='12' y1='16' x2='12.01' y2='16'></line></svg>
                     </button>
@@ -460,21 +460,21 @@ $content_url = $_GET['c'];
                <div style="display:none;" id="share_menu_<?=$post_id?>" class="share_c_box" >
                 <p class="share_c_txt">Share content</p>
                 <hr class="share_hr"></hr>
-                <input class="share_input" id="c_id<?=$post_id?>" value="https://speecher.me/content/<?=$post_id?>"></input>
+                <input class="share_input" id="c_id<?=$post_id?>" value="https://ripledd.com/content/<?=$post_id?>"></input>
                 <div class="share_btn_holder">
                 <input type="button" onclick="copyUrl<?=$post_id?>()" id="share_copy_btn" class="copy_link_btn<?=$post_id?>" value="Copy link"><svg class="share_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></input>
                 <br>
                 <input type="button" onclick="openEmbed<?=$post_id?>()" id="share_copy_btn" value="Embed media"><svg class="share_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></input>
                 <br>
                 <div style="display:none;" id="embed_copy_holder<?=$post_id?>" class="embed_copy_holder">
-                <textarea id="embed_area<?=$post_id?>" class="embed_area" rows="8" cols="37"><iframe width="560" height="315" src="https://speecher.me/embed/post?p=<?=$post_id?>" scrolling="no" title="Speecher media player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></textarea>
+                <textarea id="embed_area<?=$post_id?>" class="embed_area" rows="8" cols="37"><iframe width="560" height="315" src="https://ripledd.com/embed/post?p=<?=$post_id?>" scrolling="no" title="Ripledd media player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></textarea>
                 <input type="button" onclick="copyEmbed<?=$post_id?>()" id="embed_copy_btn" class="embed_copy_btn<?=$post_id?>" value="Copy embed code"></input>
                 </div>
-                <a onclick="window.open(this.href,"_blank");return false;" href="https://twitter.com/intent/tweet?text=Speecher%20content%20by%20%2F<?=$user_url?>%20in%20Speecher.&url=https%3A%2F%2Fspeecher.me%2Fcontent%2Fcontent%3Fc=<?=$post_id?>">
+                <a onclick="window.open(this.href,"_blank");return false;" href="https://twitter.com/intent/tweet?text=ripledd%20content%20by%20%2F<?=$user_url?>%20in%20Ripledd.&url=https%3A%2F%2Fripledd.com%2Fcontent%2Fcontent%3Fc=<?=$post_id?>">
                 <input type="button" class="share_c_btn" value="Twitter"><svg class="share_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></input>
                 </a>
                 <br>
-                <a onclick="window.open(this.href,"_blank");return false;" href="https://www.facebook.com/dialog/share?app_id=87741124305&href=https%3A%2F%2Fspeecher.me%2Fcontent%2F<?=$post_id?>%26feature%3Dshare&display=popup">
+                <a onclick="window.open(this.href,"_blank");return false;" href="https://www.facebook.com/dialog/share?app_id=87741124305&href=https%3A%2F%2Fripledd.com%2Fcontent%2F<?=$post_id?>%26feature%3Dshare&display=popup">
                 <input type="button" class="share_c_btn" value="Facebook"><svg class="share_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></input>
                 </a>
                 <br>
@@ -832,7 +832,7 @@ $content_url = $_GET['c'];
                           navigator.share({
                             title: "Check out content by <?=$posted_by?>",
                             text: "likes:<?=$likes?> • views:<?=$views?> • comments:<?=$comments?>",
-                            url: "https://speecher.me/content/<?=$post_id?>",
+                            url: "https://ripledd.com/content/<?=$post_id?>",
                           });
                         });
                       });
