@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Notifications - Speecher</title>
+    <title>Notifications - Ripledd</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/notifi-n.css">
     <link rel="stylesheet" href="css_mobile/m-header.css">
@@ -28,13 +28,13 @@
       <div class="header_content_holder">
         <div class="m_elements_h">
           <!-- Elements for mobile START ---------------------------------------------------------------------->
-          <img class="logo_main_m" onclick="window.location.href='../'" src="img/m_logo.png" alt="speecher_logo">
+          <img class="logo_main_m" onclick="window.location.href='../'" src="img/m_logo.png" alt="ripledd_logo">
           <?php if ($secure_id == ""):echo "<style>.my_profile_bar_m{display:none;}  </style>";?>
           <?php endif; ?>
           <img onclick="openAccountMenu()" class="my_profile_bar_m" src="profile/<?=$avatar?>" alt="">
         </div>
         <!-- Elements for mobile END ---------------------------------------------------------------------->
-        <picture><source srcset="img/speecher_logo_light.png" media="(prefers-color-scheme: dark)"><img class="logo_main" onclick="window.location.href='../'" src="img/speecher_logo.png" alt="speecher_logo"></picture>
+        <picture><source srcset="img/ripledd_logo_light.png" media="(prefers-color-scheme: dark)"><img class="logo_main" onclick="window.location.href='../'" src="img/ripledd_logo.png" alt="ripledd_logo"></picture>
           <form class="search_box" action="search.php" method="post">
             <input id="live_search" class="search_input" type="text" autocomplete="off" placeholder="Find content..."  name="input_value" value="">
 
